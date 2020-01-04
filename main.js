@@ -1,7 +1,5 @@
 
 (function (window, document) {
- 
-
 	CanvasRenderingContext2D.prototype.drawBreakingText = function (str, x, y, w, lh, method) {
 		// local variables and defaults
 		var textSize = parseInt(this.font.replace(/\D/gi, ''));
@@ -49,8 +47,7 @@
 			}
       // replace is to remove trailing whitespace
 			textParts.push(currLine);
-		}
-
+    }
 		// render the text on the canvas
 		for (var i = 0; i < textParts.length; i++) {
 			if (method === 'fill') {
@@ -70,6 +67,35 @@
 }) (window, document);
 
 
+        //Color picker
+const pickr = Pickr.create({
+  el: '.color-picker',
+  theme: 'nano', // or 'monolith', or 'nano' 
+  swatches: [
+      '#333333'
+      
+  ],
+  components: {
+
+      // Main components
+      preview: true,
+      opacity: true,
+      hue: true,
+
+      // Input / output Options
+      interaction: {
+          hex: true,
+          rgba: true,
+          input: true,
+      }
+  }
+});
+pickr.on('change', (color, instance) => {
+  const rgbaColor = color.toRGBA().toString();
+  console.log(rgbaColor)
+ document.querySelector('body').style.background=rgbaColor;
+})
+        
 
 var canvas = document.createElement('canvas');
 var canvasWrapper = document.getElementById('canvasWrapper');
@@ -83,11 +109,7 @@ var textBottom = 'Romanian Christmas';
 var textSizeTop = 10;
 var textSizeBottom = 10;
 var image = document.createElement('img');
-
-
-
-
-
+ 
 image.onload = function (ev) {
   // delete and recreate canvas do untaint it
   canvas.outerHTML = '';
@@ -119,12 +141,13 @@ document.getElementById('textTop').oninput = function(ev) {
   draw();
 };
 
+
+
+
 document.getElementById('textBottom').oninput = function(ev) {
   textBottom = this.value;
   draw();
 };
-
-
 
 document.getElementById('textSizeTop').oninput = function(ev) {
   textSizeTop = parseInt(this.value);
@@ -137,7 +160,6 @@ document.getElementById('textSizeBottom').oninput = function(ev) {
   document.getElementById('textSizeBottomOut').innerHTML = this.value;
 };
 
-
 document.getElementById('trueSize').onchange = function(ev) {
   if (document.getElementById('trueSize').checked) {
     canvas.classList.remove('fullwidth');
@@ -145,7 +167,6 @@ document.getElementById('trueSize').onchange = function(ev) {
     canvas.classList.add('fullwidth');
   }
 };
-
 
 document.getElementById('export').onclick = function () {
     var img = canvas.toDataURL('image/png');
@@ -177,9 +198,9 @@ function draw() {
   
   // draw the image
   ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-  
+
   // styles
-  ctx.fillStyle = '#fff';
+  ctx.fillStyle = '#fff'
   ctx.strokeStyle = '#000';
   ctx.lineWidth = canvas.width*0.004;
   
