@@ -34,6 +34,6 @@ A simple meme generator, which can help you to create funny memes.You can also i
  * Animista- I use this css library because it's a place where you ca play with a collection of ready to use CSS animations and it has 
  a clean and simple implementation.
  
- *Pickr- I use this color picker library for simplicity and versatility. It has 3 different themes, multiple color representations
+ * Pickr- I use this color picker library for simplicity and versatility. It has 3 different themes, multiple color representations
  and opacity control.
  
