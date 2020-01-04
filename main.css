@@ -1,7 +1,7 @@
 /*IMPORTS*/
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:400,400i,500|Lobster:400|Source+Code+Pro:400";
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Homemade+Apple|Satisfy|Shadows+Into+Light+Two');
 /*MAIN*/
-
 
 body {
   margin-bottom: 10px;
@@ -61,6 +61,10 @@ img {
 }
 
 /*INPUT METHODS*/
+.pickr .pcr-button {
+  top: 10px;
+  left: 45px;
+}
 button,
 .btn {
   padding: 15px;
@@ -154,10 +158,12 @@ input[type='text'], input[type='range'] {
   width: 100%;
 }
 
-h3 > i.fa {
-  margin-right: .2em;
+h3 > i.far {
+  margin-right: .3em;
 }
-
+h3 > i.fas {
+  margin-right: .3em;
+}
 
 /*Animation*/
  @-webkit-keyframes text-focus-in {
@@ -185,13 +191,10 @@ h3 > i.fa {
   }
 }
 
-
 .title-color {
 	-webkit-animation: text-focus-in 1.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 1.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
-
-
 
 @-webkit-keyframes bounce-in-right{0%{-webkit-transform:translateX(600px);transform:translateX(600px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}38%{-webkit-transform:translateX(0);transform:translateX(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}55%{-webkit-transform:translateX(68px);transform:translateX(68px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}72%{-webkit-transform:translateX(0);transform:translateX(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}81%{-webkit-transform:translateX(32px);transform:translateX(32px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}90%{-webkit-transform:translateX(0);transform:translateX(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}95%{-webkit-transform:translateX(8px);transform:translateX(8px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}100%{-webkit-transform:translateX(0);transform:translateX(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}@keyframes bounce-in-right{0%{-webkit-transform:translateX(600px);transform:translateX(600px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}38%{-webkit-transform:translateX(0);transform:translateX(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}55%{-webkit-transform:translateX(68px);transform:translateX(68px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}72%{-webkit-transform:translateX(0);transform:translateX(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}81%{-webkit-transform:translateX(32px);transform:translateX(32px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}90%{-webkit-transform:translateX(0);transform:translateX(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}95%{-webkit-transform:translateX(8px);transform:translateX(8px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}100%{-webkit-transform:translateX(0);transform:translateX(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}
 
