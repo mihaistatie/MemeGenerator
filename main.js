@@ -23,17 +23,14 @@
 		for (var i = 0; i < textParts.length; i++) {
 			words[i] = textParts[i].split(' ');
 		}
-
 		// we reset the textParts
 		textParts = [];
-
 		// calculate recommended line breaks
 		// split between the words
 		for (var i = 0; i < textPartsNo; i++) {
 
 			// clear the testline for the next manually broken line
 			currLine = '';
-
 			for (var j = 0; j < words[i].length; j++) {
 				testLine = currLine + words[i][j] + ' ';
 
@@ -61,23 +58,18 @@
 				return false;
 			}
 		}
-
 		return {'textParts': textParts, 'textHeight': textSize*lh*textParts.length};
 	};
 }) (window, document);
-
-
         //Color picker
 const pickr = Pickr.create({
   el: '.color-picker',
   theme: 'nano', // or 'monolith', or 'nano' 
   swatches: [
-      '#333333'
-      
+      '#333333'      
   ],
   components: {
-
-      // Main components
+     // Main components
       preview: true,
       opacity: true,
       hue: true,
@@ -94,9 +86,7 @@ pickr.on('change', (color, instance) => {
   const rgbaColor = color.toRGBA().toString();
   console.log(rgbaColor)
  document.querySelector('body').style.background=rgbaColor;
-})
-        
-
+})       
 var canvas = document.createElement('canvas');
 var canvasWrapper = document.getElementById('canvasWrapper');
 canvasWrapper.appendChild(canvas);
@@ -109,8 +99,8 @@ var textBottom = 'Romanian Christmas';
 var textSizeTop = 10;
 var textSizeBottom = 10;
 var image = document.createElement('img');
- 
 image.onload = function (ev) {
+	
   // delete and recreate canvas do untaint it
   canvas.outerHTML = '';
   canvas = document.createElement('canvas');
@@ -121,11 +111,9 @@ image.onload = function (ev) {
   
   draw();
 };
-
 document.getElementById('imgURL').oninput = function(ev) {
   image.src = this.value;
 };
-
 document.getElementById('imgFile').onchange = function(ev) {
   var reader = new FileReader();
   reader.onload = function(ev) {
@@ -134,15 +122,10 @@ document.getElementById('imgFile').onchange = function(ev) {
   reader.readAsDataURL(this.files[0]);
 };
 
-
-
 document.getElementById('textTop').oninput = function(ev) {
   textTop = this.value;
   draw();
 };
-
-
-
 
 document.getElementById('textBottom').oninput = function(ev) {
   textBottom = this.value;
