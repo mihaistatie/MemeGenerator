@@ -19,7 +19,6 @@ body {
   display: inline;
   -webkit-animation: bounce-in-right 1.3s both;
   animation: bounce-in-right 1.3s both;
-
 }
 span {
   font-family: 'Wendy One', sans-serif;
